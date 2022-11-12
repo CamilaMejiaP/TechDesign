@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 05-11-2022 a las 14:55:35
+-- Tiempo de generación: 12-11-2022 a las 14:27:12
 -- Versión del servidor: 5.7.31
 -- Versión de PHP: 7.3.21
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `techdesign`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `galeria`
+--
+
+DROP TABLE IF EXISTS `galeria`;
+CREATE TABLE IF NOT EXISTS `galeria` (
+  `id_producto_imagen` int(11) NOT NULL,
+  `ruta_imagen_producto` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_producto_imagen`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -41,19 +54,22 @@ CREATE TABLE IF NOT EXISTS `productos` (
 --
 
 INSERT INTO `productos` (`id_p`, `producto`, `precio`, `cantidad`) VALUES
-(1, 'jabon', 2000, 3),
 (2, 'olla', 20, 88),
-(3, 'jabon', 2000, 3),
-(4, 'olla', 2000, 3),
-(5, 'olla', 2000, 3),
-(6, 'olla', 2000, 3),
-(7, 'jabon', 20, 88),
-(8, 'olla', 2000, 3),
-(9, 'df', 34, 34),
-(10, 'olla', 20, 545),
-(11, 'olla', 20, 3),
-(12, 'olla', 2000, 3),
-(13, 'jabon', 20, 3);
+(4, 'olla', 2000, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `producto_imagen`
+--
+
+DROP TABLE IF EXISTS `producto_imagen`;
+CREATE TABLE IF NOT EXISTS `producto_imagen` (
+  `id_producto` int(11) NOT NULL AUTO_INCREMENT,
+  `ref_producto` varchar(255) DEFAULT NULL,
+  `nombre_producto` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_producto`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

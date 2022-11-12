@@ -57,7 +57,7 @@
     <!--FAVICON-->
     <link rel="icon" href="img/fav.png">
     <!--CSS Propio-->
-    <link rel="stylesheet" href="css/estilos1.css">
+    <link rel="stylesheet" href="css/estilos2.css">
     <title>Catalogo Todos</title>
 </head>
 <body class="fondo">
@@ -70,7 +70,7 @@
     ?>
     
     <div class="container-fluid  d-flex">
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="d-flex ms-3 justify-content-end" id="titulo3" href="">
                 <h3 class="mt-1 me-3">TechDesign</h3>
                 <img class="image-responsive" id="imgennav" src="img/logo.png">
@@ -105,6 +105,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Contacto.php">Formulario de contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="registro.php">Registro de producto</a>
                         </li>
                     </ul>
                 </div>
